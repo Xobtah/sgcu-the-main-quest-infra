@@ -23,5 +23,5 @@ log.the-main.quest {
 }
 
 the-main.quest {
-    reverse_proxy os:80
+    reverse_proxy landing:80
 }
