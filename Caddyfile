@@ -2,10 +2,6 @@ sgarant.fr {
     reverse_proxy sgarantfr:80
 }
 
-the-main.quest {
-    reverse_proxy os:3000
-}
-
 icecast.the-main.quest {
     reverse_proxy radio-icecast:8000
 }
@@ -19,9 +15,13 @@ radio.the-main.quest {
 }
 
 #events.the-main.quest {
-#    reverse_proxy events:3000
+#    reverse_proxy events:80
 #}
 
 lunch.the-main.quest {
-    reverse_proxy lunch:3000
+    reverse_proxy lunch:80
+}
+
+the-main.quest {
+    reverse_proxy os:80
 }
