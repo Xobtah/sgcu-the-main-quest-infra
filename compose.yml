@@ -1,0 +1,27 @@
+include:
+  - ../sgcu-the-main-quest-os/compose.yml
+  - ../sgcu-the-main-quest-radio/compose.yml
+  - ../sgcu-the-main-quest-lunch/compose.yml
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - web
+
+networks:
+  web:
+    name: web
+
+volumes:
+  caddy_data:
+  caddy_config:
