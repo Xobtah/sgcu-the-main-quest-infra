@@ -3,7 +3,7 @@ sgarant.fr {
 }
 
 icecast.the-main.quest {
-    reverse_proxy radio-icecast:8000
+    reverse_proxy radio-icecast:8000/radio.mp3
 }
 
 radio-api.the-main.quest {
@@ -20,6 +20,10 @@ radio.the-main.quest {
 
 lunch.the-main.quest {
     reverse_proxy lunch:80
+}
+
+log.the-main.quest {
+    reverse_proxy log:80
 }
 
 the-main.quest {

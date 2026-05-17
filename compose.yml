@@ -2,6 +2,7 @@ include:
   - ../sgcu-the-main-quest-os/compose.yml
   - ../sgcu-the-main-quest-radio/compose.yml
   - ../sgcu-the-main-quest-lunch/compose.yml
+  - ../sgcu-the-main-quest-log/compose.yml
 
 services:
   caddy:
